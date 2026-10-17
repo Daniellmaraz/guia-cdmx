@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guía CDMX · 17–19 oct 2026</title>
+  <meta name="description" content="Guía personal del viaje en grupo a la Ciudad de México: itinerario, fichas de cada lugar, dónde comer, mapa, clima y checklist. Funciona sin internet.">
+  <meta name="theme-color" content="#E4007C" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Guía CDMX">
+  <meta property="og:title" content="Guía del viaje a la CDMX · 17–19 oct 2026">
+  <meta property="og:description" content="Itinerario, lugares, comida, mapa y checklist del viaje.">
+  <meta property="og:image" content="assets/img/hero.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="assets/img/hero-sm.webp" imagesrcset="assets/img/hero-sm.webp 640w, assets/img/hero.webp 1200w" imagesizes="100vw">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* Aplica el tema guardado antes de pintar (evita parpadeo) */
+    try { var t = localStorage.getItem('guia-tema'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 3 4 27h24L16 3Z" fill="var(--amarillo)"/><path d="M16 3l-5 10h10L16 3Z" fill="var(--rosa)"/><path d="M8.5 19h15M6.3 23.5h19.4" stroke="var(--azul)" stroke-width="2.2"/></svg>
+      </span>
+      <span class="brand-txt">Guía CDMX <small>17–19 oct</small></span>
+    </a>
+    <nav class="topnav" aria-label="Secciones">
+      <a href="#itinerario">Itinerario</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#cerca">Cerca del hotel</a>
+      <a href="#comida">Comida</a>
+      <a href="#planb">Plan B</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#compras">Compras</a>
+      <a href="#hotel">Hotel</a>
+      <a href="#clima">Clima</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="btn-share" type="button" aria-label="Compartir la guía">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="btn-theme" type="button" aria-label="Cambiar entre modo claro y oscuro">
+        <svg class="i-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PORTADA -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="assets/img/hero-sm.webp" srcset="assets/img/hero-sm.webp 640w, assets/img/hero.webp 1200w" sizes="100vw"
+             alt="Palacio de Bellas Artes con su cúpula dorada bajo cielo azul" width="1200" height="889" fetchpriority="high">
+      </div>
+      <div class="papel papel-hero" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Tour en grupo desde Guadalajara</p>
+        <h1 id="hero-title">Viaje a la Ciudad de México</h1>
+        <p class="hero-dates">17 – 19 de octubre 2026</p>
+        <div class="countdown" id="countdown" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="now-wrap">
+      <div class="rain-alert" id="rain-alert" role="status" hidden></div>
+      <article class="now-card reveal" id="now-card" aria-live="polite">
+        <p class="now-loading">Calculando qué sigue…</p>
+      </article>
+    </div>
+
+    <!-- ITINERARIO -->
+    <section id="itinerario" class="section" aria-labelledby="t-itinerario">
+      <header class="sec-head">
+        <p class="kicker">Paso a paso</p>
+        <h2 id="t-itinerario">Itinerario</h2>
+        <p class="sec-sub">Horarios aproximados en hora de la CDMX. Toquen una actividad para abrir la ficha del lugar.</p>
+      </header>
+      <div class="tabs" role="tablist" aria-label="Días del viaje" id="day-tabs"></div>
+      <div id="day-panels"></div>
+    </section>
+
+    <!-- LUGARES DEL ITINERARIO -->
+    <section id="lugares" class="section" aria-labelledby="t-lugares">
+      <header class="sec-head">
+        <p class="kicker">Historia, leyendas y tips</p>
+        <h2 id="t-lugares">Lugares del itinerario</h2>
+        <p class="sec-sub">Cada ficha tiene galería, lo esencial, historia con línea de tiempo, arquitectura, leyendas, datos curiosos y un recorrido sugerido.</p>
+      </header>
+      <div class="place-grid" id="place-grid"></div>
+    </section>
+
+    <!-- HOTEL -->
+    <section id="hotel" class="section" aria-labelledby="t-hotel">
+      <header class="sec-head">
+        <p class="kicker">Nuestra base</p>
+        <h2 id="t-hotel">Hotel San Francisco</h2>
+      </header>
+      <div class="hotel" id="hotel-box"></div>
+    </section>
+
+    <!-- CERCA DEL HOTEL -->
+    <section id="cerca" class="section" aria-labelledby="t-cerca">
+      <header class="sec-head">
+        <p class="kicker">Tarde y noche libres del sábado</p>
+        <h2 id="t-cerca">Cerca del hotel</h2>
+        <p class="sec-sub">Todo se puede hacer a pie. Distancias aproximadas caminando desde el hotel.</p>
+      </header>
+      <div class="chips" id="cerca-filtros" role="group" aria-label="Filtrar por categoría"></div>
+      <div class="map-box">
+        <div class="map" id="map-cerca" role="region" aria-label="Mapa de lugares cerca del hotel"></div>
+        <p class="map-msg" id="map-cerca-msg" hidden></p>
+      </div>
+      <details class="route reveal" id="ruta" open>
+        <summary><span class="route-ico" aria-hidden="true">🚶</span><span><strong id="ruta-titulo">Ruta a pie sugerida</strong><small id="ruta-dur"></small></span></summary>
+        <ol class="route-list" id="ruta-lista"></ol>
+      </details>
+      <div class="card-grid" id="cerca-grid"></div>
+    </section>
+
+    <!-- GASTRONOMÍA -->
+    <section id="comida" class="section" aria-labelledby="t-comida">
+      <header class="sec-head">
+        <p class="kicker">Gastronomía</p>
+        <h2 id="t-comida">Qué y dónde comer</h2>
+        <p class="sec-sub">Platillos típicos, lugares verificados por zona y tips para comer en la ciudad.</p>
+      </header>
+      <div class="tabs tabs-food" role="tablist" aria-label="Gastronomía">
+        <button role="tab" id="ft-donde" aria-controls="fp-donde" aria-selected="true">Dónde comer</button>
+        <button role="tab" id="ft-platillos" aria-controls="fp-platillos" aria-selected="false" tabindex="-1">Platillos</button>
+        <button role="tab" id="ft-tips" aria-controls="fp-tips" aria-selected="false" tabindex="-1">Tips</button>
+      </div>
+      <div role="tabpanel" id="fp-donde" aria-labelledby="ft-donde">
+        <div class="filters" id="food-filtros"></div>
+        <div id="food-zonas"></div>
+      </div>
+      <div role="tabpanel" id="fp-platillos" aria-labelledby="ft-platillos" hidden>
+        <div class="dish-grid" id="dish-grid"></div>
+      </div>
+      <div role="tabpanel" id="fp-tips" aria-labelledby="ft-tips" hidden>
+        <div class="tips-grid" id="food-tips"></div>
+      </div>
+    </section>
+
+    <!-- PLAN B -->
+    <section id="planb" class="section" aria-labelledby="t-planb">
+      <header class="sec-head">
+        <p class="kicker">Por si llueve</p>
+        <h2 id="t-planb">Plan B si llueve</h2>
+        <p class="sec-sub" id="pb-intro"></p>
+      </header>
+      <h3 class="sub-h">Opciones techadas cerca del hotel</h3>
+      <div class="card-grid" id="pb-grid"></div>
+      <details class="route reveal" id="pb-ruta">
+        <summary><span class="route-ico route-ico-b" aria-hidden="true">☔</span><span><strong id="pb-ruta-titulo"></strong><small id="pb-ruta-dur"></small></span></summary>
+        <ol class="route-list" id="pb-ruta-lista"></ol>
+        <p class="route-foot"><button class="btn btn-sm btn-azul" type="button" data-mapfilter="rutab">🗺️ Ver ruta techada en el mapa</button></p>
+      </details>
+      <h3 class="sub-h">Qué cambia en cada lugar del itinerario</h3>
+      <div class="pb-places" id="pb-lugares"></div>
+      <h3 class="sub-h">Tips para la lluvia</h3>
+      <div class="reco-grid" id="pb-tips"></div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section id="eventos" class="section" aria-labelledby="t-eventos">
+      <header class="sec-head">
+        <p class="kicker">17 y 18 de octubre</p>
+        <h2 id="t-eventos">Eventos del fin de semana</h2>
+        <p class="sec-sub" id="ev-nota"></p>
+      </header>
+      <div id="ev-avisos"></div>
+      <div class="card-grid" id="ev-grid"></div>
+      <div class="ev-carteleras reveal" id="ev-carteleras"></div>
+    </section>
+
+    <!-- COMPRAS -->
+    <section id="compras" class="section" aria-labelledby="t-compras">
+      <header class="sec-head">
+        <p class="kicker">Recuerdos y artesanías</p>
+        <h2 id="t-compras">Compras y recuerdos</h2>
+        <p class="sec-sub" id="co-nota"></p>
+      </header>
+      <div class="tabs tabs-shop" role="tablist" aria-label="Compras">
+        <button role="tab" id="ct-lista" aria-controls="cp-lista" aria-selected="true">Mi lista</button>
+        <button role="tab" id="ct-lugar" aria-controls="cp-lugar" aria-selected="false" tabindex="-1">Por lugar</button>
+        <button role="tab" id="ct-cerca" aria-controls="cp-cerca" aria-selected="false" tabindex="-1">Cerca del hotel</button>
+        <button role="tab" id="ct-arte" aria-controls="cp-arte" aria-selected="false" tabindex="-1">Artesanías</button>
+      </div>
+      <div role="tabpanel" id="cp-lista" aria-labelledby="ct-lista"><div class="check" id="rec-box"></div></div>
+      <div role="tabpanel" id="cp-lugar" aria-labelledby="ct-lugar" hidden><div class="shop-places" id="co-lugares"></div></div>
+      <div role="tabpanel" id="cp-cerca" aria-labelledby="ct-cerca" hidden><div class="card-grid" id="co-cerca"></div></div>
+      <div role="tabpanel" id="cp-arte" aria-labelledby="ct-arte" hidden><div class="dish-grid" id="co-arte"></div></div>
+      <h3 class="sub-h">Tips para comprar</h3>
+      <div class="reco-grid" id="co-tips"></div>
+    </section>
+
+    <!-- CLIMA -->
+    <section id="clima" class="section" aria-labelledby="t-clima">
+      <header class="sec-head">
+        <p class="kicker">Pronóstico</p>
+        <h2 id="t-clima">Clima y qué ponerse</h2>
+      </header>
+      <div class="weather" id="weather"></div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section id="checklist" class="section" aria-labelledby="t-check">
+      <header class="sec-head">
+        <p class="kicker">Antes de salir</p>
+        <h2 id="t-check">Checklist de qué llevar</h2>
+        <p class="sec-sub">Se guarda en este teléfono.</p>
+      </header>
+      <div class="check" id="check-box"></div>
+    </section>
+
+    <!-- RECOMENDACIONES -->
+    <section id="recomendaciones" class="section" aria-labelledby="t-reco">
+      <header class="sec-head">
+        <p class="kicker">Del itinerario y extras</p>
+        <h2 id="t-reco">Recomendaciones del viaje</h2>
+      </header>
+      <div id="reco-box"></div>
+    </section>
+
+    <!-- CONTACTOS -->
+    <section id="contactos" class="section" aria-labelledby="t-contactos">
+      <header class="sec-head">
+        <p class="kicker">Tenlos a la mano</p>
+        <h2 id="t-contactos">Teléfonos y contactos</h2>
+      </header>
+      <div id="contact-box"></div>
+    </section>
+
+    <!-- OFFLINE + CRÉDITOS -->
+    <section id="creditos" class="section" aria-labelledby="t-creditos">
+      <header class="sec-head">
+        <p class="kicker">Sin internet y créditos</p>
+        <h2 id="t-creditos">Acerca de esta guía</h2>
+      </header>
+      <div class="offline-box" id="offline-box"></div>
+      <p class="disclaimer">Los horarios, precios y reglas de acceso se verificaron en octubre de 2026 con fuentes oficiales y medios; pueden cambiar sin aviso. Lo marcado como <em>“verificar”</em> no se pudo confirmar al 100 %.</p>
+      <details class="credits">
+        <summary>Créditos de las fotos (Wikimedia Commons)</summary>
+        <ul id="credit-list"></ul>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="papel papel-foot" aria-hidden="true"></div>
+    <p>Hecho con cariño para el viaje · CDMX 2026</p>
+  </footer>
+
+  <!-- Navegación inferior (celular) -->
+  <nav class="bottomnav" aria-label="Navegación principal">
+    <a href="#inicio" data-nav="inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9Z"/></svg><span>Inicio</span></a>
+    <a href="#itinerario" data-nav="itinerario"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v3M16 3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm3 7h3v3H8z"/></svg><span>Itinerario</span></a>
+    <a href="#lugares" data-nav="lugares"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg><span>Lugares</span></a>
+    <a href="#comida" data-nav="comida"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18a9 9 0 0 1-18 0Zm2-3c1-3 4-5 7-5s6 2 7 5M8 8h.01M12 7h.01M16 8h.01"/></svg><span>Comida</span></a>
+    <button type="button" id="btn-mas" aria-haspopup="dialog" aria-controls="mas-sheet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h.01M12 12h.01M19 12h.01"/></svg><span>Más</span></button>
+  </nav>
+
+  <!-- Hoja "Más" -->
+  <div class="sheet" id="mas-sheet" role="dialog" aria-modal="true" aria-label="Más secciones" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel">
+      <div class="sheet-grab" aria-hidden="true"></div>
+      <div class="sheet-grid">
+        <a href="#cerca" data-close><span>🗺️</span>Cerca del hotel</a>
+        <a href="#hotel" data-close><span>🏨</span>Hotel</a>
+        <a href="#planb" data-close><span>☔</span>Plan B si llueve</a>
+        <a href="#eventos" data-close><span>🎉</span>Eventos</a>
+        <a href="#compras" data-close><span>🛍️</span>Compras</a>
+        <a href="#clima" data-close><span>🌦️</span>Clima</a>
+        <a href="#checklist" data-close><span>✅</span>Checklist</a>
+        <a href="#recomendaciones" data-close><span>💡</span>Recomendaciones</a>
+        <a href="#contactos" data-close><span>📞</span>Contactos</a>
+        <a href="#creditos" data-close><span>📥</span>Sin internet y créditos</a>
+        <button type="button" data-close data-share><span>🔗</span>Compartir guía</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ficha de lugar (pantalla completa) -->
+  <div class="ficha" id="ficha" role="dialog" aria-modal="true" aria-labelledby="ficha-title" hidden>
+    <div class="ficha-backdrop" data-close-ficha></div>
+    <article class="ficha-panel" id="ficha-panel" tabindex="-1"></article>
+  </div>
+
+  <!-- Visor de fotos -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotos" hidden>
+    <button class="lb-close icon-btn" type="button" aria-label="Cerrar visor" data-close-lb>
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <div class="lb-track" id="lb-track"></div>
+    <button class="lb-nav lb-prev" type="button" aria-label="Foto anterior">‹</button>
+    <button class="lb-nav lb-next" type="button" aria-label="Foto siguiente">›</button>
+    <p class="lb-cap" id="lb-cap"></p>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">Esta guía necesita JavaScript para mostrar su contenido.</p></noscript>
+
+  <script src="js/data/viaje.js"></script>
+  <script src="js/data/lugares.js"></script>
+  <script src="js/data/cercanos.js"></script>
+  <script src="js/data/comida.js"></script>
+  <script src="js/data/extras.js"></script>
+  <script src="js/data/creditos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Guía del viaje a la CDMX · 17–19 oct 2026",
+  "short_name": "Guía CDMX",
+  "description": "Itinerario, fichas de lugares, comida, mapa, clima y checklist del viaje a la Ciudad de México.",
+  "lang": "es-MX",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF6EE",
+  "theme_color": "#E4007C",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
